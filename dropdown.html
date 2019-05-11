@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Dropdown Box</title>
+    </head>
+    <script>
+        function fn1(){
+            var x=document.getElementById("select1");
+            document.write("Selected option is "+x.options[x.selectedIndex].value);
+        }
+    </script>
+    <body>
+        <h2>Select from the list</h2>
+        <select id="select1">
+            <option>Shashank</option>
+            <option>Ajay</option>
+            <option>Manan</option>
+            <option>Saurabh</option>
+        </select>
+        <button onclick="fn1()">Submit</button>
+    </body>
+</html>

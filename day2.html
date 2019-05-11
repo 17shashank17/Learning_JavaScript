@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Day 2</title>
+    </head>
+    <script>
+        function buttonClick(){
+            var x=document.getElementById("text1").value;
+            var pass=document.getElementById("text2").value;
+            var conf_pass=document.getElementById("text3").value;
+            var m=document.getElementById("id1");
+            var f=document.getElementById("id2");
+            if (conf_pass != pass){
+                alert("password doesnt match!");
+            }
+            else{
+                document.write("<h2>Successfully logged in...!</h2>");
+                if(m.checked)
+                    document.write("<h4>User is Male</h4>");
+                else
+                    document.write("<h4>User is female<h4>");
+            }
+        }
+    </script>
+    <body>
+        <!-- name attribute is used to select any one of multiple options -->
+        <input id="text1" placeholder="username">
+        <br><br>
+        <input type="password" id="text2" placeholder="password">
+        <br><br>
+        <input type="password" id="text3" placeholder="password">
+        <br><br>
+        <input id="id1" name="grp1" type="radio">Male</input>
+        <input id="id2" name="grp1" type="radio">Female</input>
+        <br><br> 
+        <button onclick="buttonClick()">Click me</button>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Mouse hover</title>
+    </head>
+    <script>
+        function changeImage(){
+            document.getElementById("img1").src="img2.jpg" ;
+        }
+        function setOldImage(){
+            document.getElementById("img1").src="img1.jpg" ;
+        }
+    </script>
+    <body>
+        <img id="img1" onmouseover="changeImage()" onmouseout="setOldImage()" src="img1.jpg" width="500" height="500">
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!--Embedding javascript in html file-->
+<!--
+<html>
+    <head>
+        <title>Learning</title>
+        <script type="text/javascript">
+            document.write("Hello World  !");
+        </script>
+    </head>
+    <body>
+         
+    </body>
+</html>
+
+<!--Different javascript file-->
+
+<html>
+    <head>
+        <title>Learning</title>
+    </head>
+    <script type="text/javascript">
+        function cars(car_model,price){
+            this.car_model=car_model;
+            this.price=price;
+            this.speed=function(){
+                document.write("Speed is 90 km/hr");
+            }
+        }
+        var c1=new cars("Honda City",1000000);
+        var c2=new cars("Innova",2000000);
+        document.write("<h2>"+c1.car_model+"</h2>");
+        document.write("<h2>"+c2.car_model+"</h2>");
+        c1.speed();
+
+    </script>
+    <body>
+        
+    </body>
+</html>
