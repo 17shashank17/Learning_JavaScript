@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>jQuery</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h2>jQuery - DOM Manipulation</h2>
+        <h2 id="first">Statement 1</h2>
+        <div class = "mydiv">
+            <p class="myclass">The <b>Chainsmokers</b> are beast</p>
+        </div>
+        <button id="btn1">Click Me</button>
+    </body>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                alert($(".myclass").text());
+                //alert($(".myclass").css("border"));
+            })
+            /*
+            text() --> if no arguments are passed then it will return the text 
+            else it will change the text.
+            
+            html() --> shows everything written in that tag
+            
+            attr() --> tells about the attribute
+            
+            css() --> tells about css property
+            */
+    })
+    </script>
+</html>

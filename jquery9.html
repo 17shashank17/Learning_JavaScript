@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>jQuery</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h2>jQuery - DOM Manipulation: Changing CSS property</h2>
+        <button id="btn1">Append</button> 
+        <button id="btn2">After</button> 
+        <button id="btn3">Prepend</button> 
+        <button id="btn4">Before</button> 
+        <button id="btn5">Remove</button> 
+        <button id="btn6">Empty</button>        
+        <div class = "mydiv">
+            <p class="myclass">The <b>Chainsmokers</b> are beast</p>
+        </div>
+    </body>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $(".myclass").append("<p> But <b>Coldplay</b> are at God Level.");      
+            })
+
+            $("#btn2").click(function(){
+                $(".mydiv").after("<p> But <b>Coldplay</b> are at God Level.");      
+            })
+
+            $("#btn3").click(function(){
+                $(".mydiv").prepend("<p> But <b>Coldplay</b> are at God Level.");      
+            })
+
+            $("#btn4").click(function(){
+                $(".mydiv").before("<p> But <b>Coldplay</b> are at God Level.");      
+            })
+            /*
+            remove(optional id or class or tag):- removes all the content inside that id or tag or class
+            */
+            $("#btn5").click(function(){
+                $(".mydiv").remove();
+            })
+            /*
+            empty(optional id or tag or class):- empty the division 
+            */
+            $("#btn6").click(function(){
+                $(".mydiv").empty();      
+            })
+            
+    })
+    </script>
+</html>

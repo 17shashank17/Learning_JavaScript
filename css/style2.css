@@ -1,0 +1,10 @@
+.mynewdiv{
+    border: 2px solid blue;
+    border-radius: 10px;
+    background-color: aqua;
+    border-color: blue;
+}
+.mynewclass{
+    font-family: cursive;
+    font-size: 20px;
+}

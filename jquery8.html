@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>jQuery</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h2>jQuery - DOM Manipulation: Changing CSS property</h2>
+        <h2 id="first">Statement 1</h2>
+        <div class = "mydiv">
+            <p class="myclass">The <b>Chainsmokers</b> are beast</p>
+        </div>
+        <button id="btn1">Click Me To Change Font Size</button>
+    </body>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $(".myclass").css("font-size","24");
+                $(".myclass").css("border","3px solid red");
+            })
+            
+    })
+    </script>
+</html>
