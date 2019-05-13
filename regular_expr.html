@@ -6,13 +6,20 @@
     function validate(){
         var username=document.getElementById("uname");
         var pass=document.getElementById("password");
-
-        if(username.value.trim()=="" || pass.value==""){
-            alert("No blank values allowed");
+        var num=document.getElementById("mobile");
+        var regx=/[abc]/;
+        var regx2=/^[7-9][0-9]{9}$/;
+        if(username.value.trim()=="" || pass.value=="" || regx.test(username)==false){
+            alert("blank values or invalid username");
             uname.style.border="solid 3px red";
             document.getElementById("invalid").style.visibility="visible";
             return false;
         }
+        else if(regx2.test(num)==false){
+            document.getElementById("mobile_label").style.visibility="visible";
+            return false;
+        }
+
         else{
             return true;
         }
@@ -25,6 +32,10 @@
             <br><br>
             <input id="password" placeholder="password" type="password">
             <br><br>
+            <input id="mobile" placeholder="Mobile Number" type="number">
+            <br><br>
+            <label id="mobile_label" style="color:red; visibility:hidden">Invalid Mobile Number</label>
+            <br>
             <button onclick="validate()" type="submit">Submit</button>
         </form>
     </body>

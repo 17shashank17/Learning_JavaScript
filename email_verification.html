@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Email Regx</title>
+    </head>
+    <script>
+        function validate_Email(){
+            var email_id=document.getElementById("email");
+            var regx=/^([0-9a-zA-Z\.-]+)@([a-zA-Z-]+).([a-z]{2,20})$/;
+            if(regx.test(email_id)){
+                console.log("correct");                
+                return true;
+            }
+            else{
+                document.getElementById("incorrect").style.visibility="visible";
+                console.log("incorrect");
+                return false;
+            }
+        }
+    </script>
+    <body>
+        <form onsubmit="return validate_Email()" action="msg.html">
+            <input type="text" id="email" placeholder="Email" required>
+            <label id="incorrect" style="visibility:hidden; color: red;">Email Incorrect</label>
+            <br>
+            <button type="submit" onclick="validate_Email()">Submit</button>
+        </form>
+    </body>
+</html>

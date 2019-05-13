@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Fade In and Out</title>
+    </head>
+    <script type="text/javascript">
+       var time=200;
+       var increment=4;
+       var width=100;
+       function zoom_out(){
+            var img=document.getElementById("image");
+            img.style.width=width;
+            if(width<400){
+                width=width+increment;
+
+            }
+            else{
+                clearInterval(ID);
+            }
+       }
+       function zoom_in(){
+           var img=document.getElementById("image");
+           img.style.width=width;
+           if(width>100){
+               width=width-4;
+
+           }
+           else{
+               clearInterval(ID);
+           }
+
+       }
+       function zoom_out_timeout(){
+           ID=setInterval(zoom_out,time);
+       }
+       function zoom_in_timeout(){
+           ID=setInterval(zoom_in,time);   
+       }
+          
+    </script>
+    <body>
+        <button onclick="zoom_out_timeout()">Zoom Out</button><br><br>
+        <img id="image" src="images/img1.jpg" width="100" style="opacity:1.0">
+        <br><br>
+        <button onclick="zoom_in_timeout()">Zoom In</button>
+    </body>
+</html>

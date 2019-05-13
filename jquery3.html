@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Basic Css and jQuery</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h2 id="first">Statement 1</h2>
+        <div class = "mydiv">
+            <h2 class="myclass">Statement 2</h2>
+            <p id="hover1">Put mouse cursor here to fade out</p>
+        </div>
+        <h2 class="myclass">Statement 3</h2>
+        <button id="btn1">Click Me 1 time</button>
+        <button id="btn2">Click Me 2 time</button>    
+    </body>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(fn1);
+            $("#btn2").dblclick(fn1);
+            /*
+            mouseenter()
+            mouseleave()
+            */
+            $(".mydiv").hover(fn1,fn2);
+            function fn1(){
+                $(".mydiv").fadeOut(2000);  /*By class*/
+            }
+            function fn2(){
+                $(".mydiv").fadeIn(2000);  /*By class*/
+            }
+    })
+    </script>
+</html>

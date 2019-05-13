@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Basic Css and jQuery</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h2 id="first">Statement 1</h2>
+        <div class = "mydiv">
+            <h2 class="myclass">Statement 2</h2>
+            <p id="hover1">Put mouse cursor here to fade out</p>
+        </div>
+        <button id="btn1">Slide Up</button>
+        <button id="btn2">Slide Down</button>
+        <h2 class="myclass">Statement 3</h2>    
+    </body>
+    <script src="js/jquery.js"></script>
+    <script>
+
+        //slideUp and slideDown
+
+        $(document).ready(function(){
+            $("#btn1").click(fn1);
+            $("#btn2").click(fn2);
+            function fn1(){
+                $(".mydiv").slideUp();  /*By class*/
+            }
+            function fn2(){
+                $(".mydiv").slideDown();  /*By class*/
+            }
+    })
+    </script>
+</html>

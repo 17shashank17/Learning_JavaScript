@@ -1,0 +1,38 @@
+1) jQuery is a fast, small and feature-rich javascript library.
+
+2) jQuery has a method for lot of common task.
+
+3) jQuery library contains following features:
+
+    1) HTML/DOM manipulation
+    2) CSS manipulation
+    3) Effects and Animations
+    4) HTML events methods
+    5) AJAX
+    6) Utilities
+
+Ex:- fade in and fade out using jQuery
+
+    <script src=jquery.js></script>
+    <script>
+        $( #(id) ).fadetoggle(time);
+    </script>
+
+    here $ refers to jquery library
+    id is the id of attribute
+    fadetoggle is predefined function in jquery.
+
+jQuery file can also be accessed by
+
+jQuery Selectors:-
+
+        i) class --> $(".class_name,...")
+        ii) id --> $("#tag_name,...")
+        iii) tag --> $(tagname,...)
+        v) class, tag, id --> $("#id",".class","tag")
+        iv) even --> $("div:even")
+        v) first paragraph --> $("p:first")
+        vi) particular attribute of division --> $("div > p") or $("div p")
+
+            This will hide all paragraph placed inside div tag.
+    

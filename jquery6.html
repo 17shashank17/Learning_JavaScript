@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Callback and Chaining Effect</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h2 id="first">Statement 1</h2>
+        <button>Toggle</button><br><br>
+        <div class = "mydiv">
+            <h2 class="myclass">Statement 2</h2>
+            <p id="hover1">Slide Up and Down, Fade In and Out will happen </p>
+        </div>
+        <h2 class="myclass">Statement 3</h2>    
+    </body>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            function printMsg(){
+                alert("Done!");
+            }
+
+            $("button").click(function(){
+                /*callback
+                ensures that the alert dialog box comes after the event is completed */
+                /*
+                $(".mydiv").slideUp(1000,function(){
+                    alert("done");
+                });
+                */
+                //chaining
+                $(".mydiv").slideUp(1000).slideDown(1000).fadeOut(1000).fadeIn(1000, function(){
+                    alert("done");
+                });
+                
+            })
+    })
+    </script>
+</html>

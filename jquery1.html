@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Basic Css and jQuery</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h2 id="first">Statement 1</h2>
+        <div class = "mydiv">
+            <h2 class="myclass">Statement 2</h2>
+        </div>
+        <h2 class="myclass">Statement 3</h2>
+        <button onclick="action()">Click Me</button>
+    </body>
+    <script src="js/jquery.js"></script>
+    <script>
+        /*
+        Selectors:-
+
+        i) class --> $(".class_name,...")
+        ii) id --> $("#tag_name,...")
+        iii) tag --> $(tagname,...)
+        v) class, tag, id --> $("#id",".class","tag")
+        iv) even --> $("div:even")
+        v) first paragraph --> $("p:first")
+        vi) particular attribute of division --> $("div > p") or $("div p")
+
+            This will hide all paragraph placed inside div tag.
+        */
+        function action(){
+            //$("h2").fadeToggle(2000);    /*By tag*/
+            //$("#first").fadeToggle(2000);    /*By id*/
+            $(".mydiv").fadeToggle(2000);  /*By class*/
+        }
+    </script>
+</html>

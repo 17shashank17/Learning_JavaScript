@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Basic Css and jQuery</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h2 id="first">Statement 1</h2>
+        <div class = "mydiv">
+            <h2 class="myclass">Statement 2</h2>
+        </div>
+        <h2 class="myclass">Statement 3</h2>
+        <button>Click Me</button>
+    </body>
+    <script src="js/jquery.js"></script>
+    <script>
+        /* $(document).ready() ensures the execution of 
+        js code after all html codes are loaded */
+        $(document).ready(function(){
+            $("button").click(action1);
+            function action1(){
+                $(".mydiv").fadeToggle(2000);  /*By class*/
+        }
+        })
+    </script>
+</html>

@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Fade In and Out</title>
+    </head>
+    <script type="text/javascript">
+        /*
+        document -->> window
+        setTimeOut(function name,time)
+        clearTimeOut(ID)
+        setInterval(function name,time interval)
+        clearInterval(ID)
+        to access value of a style property
+        window.getComputedStyle(object).getPropertyValue(string(property name));
+        Number():- converts a string into number
+        */
+       var opacity=1.0;
+       var time=200;
+       var ID=0;
+       
+       function fade_out(){
+            var img=document.getElementById("image");
+            opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+            if(opacity>0){
+                opacity=opacity-0.1;
+                img.style.opacity=opacity;
+            }
+            else
+                clearInterval(ID);
+       }
+       function fade_in(){
+            var img=document.getElementById("image");
+            if(opacity<1){
+               opacity+=0.1;
+               img.style.opacity=opacity;
+           }
+           else{
+               clearInterval(ID);
+           }
+       }
+       function fade_out_timeout(){
+           ID=setInterval(fade_out,time);
+       }
+       function fade_in_timeout(){
+           ID=setInterval(fade_in,time);
+           
+       }
+          
+    </script>
+    <body>
+        <button onclick="fade_out_timeout()">Fade Out</button><br><br>
+        <img id="image" src="images/img1.jpg" width="400" style="opacity:1.0">
+        <br><br>
+        <button onclick="fade_in_timeout()">Fade In</button>
+    </body>
+</html>

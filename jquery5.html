@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Basic Css and jQuery</title>
+        <link rel="stylesheet" href="css/style1.css">
+    </head>
+    <body>
+        <h2>Effects in jQuery: Animation</h2>
+        <br><br><br>
+        <button>Animate</button>
+        <br>
+        <h2 class="cube">Cube</h2>
+            
+    </body>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $(".cube").animate({
+                   width: "400px",
+                   height: "400px",
+                   opacity: "1",
+                   left: "200px" 
+                },1000)
+            })
+    })
+    </script>
+</html>
