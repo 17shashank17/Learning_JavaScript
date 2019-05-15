@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Introduction to jQuery UI</title>
+        <link rel="stylesheet" href="css/style4.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+
+    </head>
+    <body>
+        <h2>Introduction to jQuery UI</h2>
+        <h3>Accordian Widget Example</h3>
+        <div id="panels">
+        <h3 class="myclass">Introduction</h1>
+        <p>
+            This is a jQuery ui tutorial. It is build on top of jQuery library. 
+            It is powerful tool for ui development. It is an open source and is 
+            availabale on <a href="jqueryui.com" style="background: None;">jqueryui.com</a>. 
+            It provides more powerful user interface tools than jquery.
+        </p>
+    
+      
+        <h3 class="myclass">Accordian Widget</h1>
+        <p>
+            This is a tool which gives a convincing look to an article. Wikipedia uses this effect.
+            You can do scroll up and scroll down to view selected part
+        </p>
+        
+        <h3 class="myclass">Random Text</h1>
+        <p>
+            dsbviuhskfjc,nvkjxhv iu zkjbxvu jhbvukjgbimu jhg biujhfxvnlkh byjcghbnkjxcbvuy jhdbkjmv x
+            fsvjhubdjhkdvxjhghislkxjcvuyxviujhxnvkjg  xuysjdfyhzlfn,xhk,vjgmgbfk,fjh  buivkjm,hcxivukjzfs
+            fvshgiukhfvoivsklnzoiv yfhxnfkvnjnoisyzinckjfsmhioerhsfnilfskycxhvoikhhvio vyshcfzhioeusydhfou
+        </p>
+        
+        </div>
+    </body>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="jquery-ui/jquery-ui.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function(){
+            $("#panels").accordion({
+                active:0,
+                collapsible:true,
+                event:"click",
+                animate: 300,
+                heightStyle: true,
+                
+            });
+        })
+    </script>
+</html>

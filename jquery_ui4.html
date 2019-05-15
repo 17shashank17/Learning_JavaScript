@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Introduction to jQuery UI</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+
+    </head>
+    <body> 
+        <h2>Interactions in jQuery UI</h2>
+        <div style="margin: 10px; padding: 10px border: 2px solid black; background-color: linen">
+            <h3 class="drag" style="height: 100px; width: 100px; background-color: aqua;">Cube1</h3>
+            <h3 class="drag" style="height: 100px; width: 100px; background-color: aqua;">Cube2</h3>
+        
+        </div>
+    </body>
+    <script src="js/jquery.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
+    <script>
+        $(".drag").draggable({
+            //axis:y;
+            containment: "parent",
+            cursor: "grabbing",
+            opacity: 0.5,
+            //grid: [300,300],  //min movement=300px
+            snap:true,  //both cubes snap not overlap
+            snapTolerance: 30
+        });
+    </script>
+</html>

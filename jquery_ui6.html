@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Introduction to jQuery UI</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+
+    </head>
+    <body>
+        <h2>Introduction to jQuery UI</h2>
+        <h3>Resizable Interaction in jQuery UI</h3>
+        <img src="images/img1.jpg" width=300 id="img">
+    </body>
+    <script src="js/jquery.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#img").resizable({
+                //maxHeight:600,
+                //minHeight: 300,
+                ghost:true,    //show shadow image
+                aspectRatio: true,   
+                autoHide: true,       //do not show icon
+                //distance: 200  //increase when width is incresed by 200
+            });
+        })
+    </script>
+</html>

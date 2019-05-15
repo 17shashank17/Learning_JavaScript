@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Introduction to jQuery UI</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+
+    </head>
+    <body>
+        <h2>Introduction to jQuery UI</h2>
+        <h3>Message Dialog Box Example</h3>
+        <div id="mydiv1" style="padding: 10px;margin: 10px;
+        border:2px solid blue">
+            <h2>Hi, This is Shashank!</h2>
+            <br><br>
+            <button onclick="message()" id="btn">Click to show Message Box</button>
+        </div>
+        <div id="mydiv2" title="Dialog Box">
+            <h2>This is just a message</h2>
+        </div>
+    </body>
+    <script src="js/jquery.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
+    <script>
+        function message(){
+            $("#mydiv2").dialog({
+                title:"Message Dialog Box",
+                //draggable:false,
+                //resizable:true,
+                height:300,
+                width:300,
+                modal: true,  //background become inaccessible
+
+                buttons:[
+                    {
+                        text:"Close",
+                        icon: "ui-icon-heart",
+                        click: function(){
+                            $(this).dialog("close");
+                        }
+                    }
+                ]
+            });
+        }
+    </script>
+</html>

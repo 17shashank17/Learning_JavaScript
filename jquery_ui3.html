@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Introduction to jQuery UI</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+
+    </head>
+    <body>
+        <h2>Introduction to jQuery UI</h2>
+        <h3>Date Picker Widget Example</h3>
+        <div id="mydiv">
+            <h3>DatePicker</h3>
+            <input id="datepicker" placeholder="click to enter date" type="text">
+        </div>
+    </body>
+    <script src="js/jquery.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
+    <script>
+        $("#datepicker").datepicker({
+            numberOfMonths:1,
+            changeYear:true,
+            changeMonth:true,
+            showWeek:true,
+            //weekHeader:"",
+            showOtherMonths:true,
+            //minDate: new Date(year,month(indexing 0),date) Similarly maxDate
+        });
+    </script>
+</html>

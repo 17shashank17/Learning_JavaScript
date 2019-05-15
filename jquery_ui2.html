@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Introduction to jQuery UI</title>
+        <link rel="stylesheet" href="css/style4.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+
+    </head>
+    <body>
+        <h2>Introduction to jQuery UI</h2>
+        <h3>AutoComplete Widget Example</h3>
+        <div id="mydiv">
+            <lable><b>Enter your City</b></lable>
+            <input type="text" name="id1" id="citybox">
+        </div>
+    </body>
+    <script src="js/jquery.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
+    <script>
+        var cities=["Gorakhpur","Mumbai","Kolkata","Delhi",
+                    "Mangalore","Bangalore","Pune","Indore",
+                    "Shillong","Bhopal","Allahabad","Varanasi"];
+        $("#citybox").autocomplete({
+            source: cities
+        },{
+            autoFocus:true,
+            delay:0,
+            minLength:2
+        });
+    </script>
+</html>
